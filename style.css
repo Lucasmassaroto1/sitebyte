@@ -17,6 +17,12 @@ body{
     background: #6e6e6e;
     transition: background-color 0.5s ease;
 }
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
 .interface{
     margin: 0 auto;
 }
@@ -26,8 +32,16 @@ section{
     align-items: center;
     text-align: center;
     height: 100vh;
-    border: 2px solid black;
-  }
+    /* border: 2px solid black; */
+}
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color: #00FF08;
+}
 
 /* HEADER */
 .menu-lateral{
@@ -92,8 +106,6 @@ section{
 .conteudo{
     margin-left: 40px;
     padding: 40px;
-    /* color: var(--secondary-color);
-    background-color: var(--text-color); */
     transition: all 0.5s;
 }
 .conteudo.ativo{
@@ -117,46 +129,65 @@ section{
     visibility: visible;
 }
 
-/* INICIO */
+/* SECTION INICIO */
 section.topo-do-site .flex{
     align-items: center;
     justify-content: center;
     gap: 90px;
-  }
-  .topo-do-site h1{
+}
+.topo-do-site h1{
     color: white;
     font-size: 42px;
     line-height: 40px;
     margin-bottom: 30px;
-  }
-  .topo-do-site .text-topo-site h1 span{
+}
+.topo-do-site .text-topo-site h1 span{
     color: #00FF08;
     font-size: 32px;
     display: block;
-  }
-  .topo-do-site .img-topo-site img{
+}
+.topo-do-site .img-topo-site img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
-  }
-  @keyframes flutuar{
+}
+@keyframes flutuar{
     0%{
-      top: 0;
+        top: 0;
     }
     100%{
-      top: 30px;
+        top: 30px;
     }
-  }
-
-
-/* COMMANDS CARDS */
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
 }
+/* SECTION SOBRE */
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color: white;
+}
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre, .txt-sobre h2 span{
+    color: #00FF08;
+    display: block;
+}
+.sobre, .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+.sobre, .txt-sobre p{
+    color: white;
+    font-weight: 600;
+}
+
+/* SECTION COMMANDS */
 .card-contianer{
     perspective: 1000px;
+    
 }
 .card{
     background-color:  #353333;
@@ -167,6 +198,9 @@ section.topo-do-site .flex{
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
 }
 .card.virado{
     transform: rotateY(180deg);
