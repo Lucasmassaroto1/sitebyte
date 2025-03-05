@@ -38,9 +38,9 @@
         <section clas="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
-                    <div class="img-sobre">
+                    <!-- <div class="img-sobre">
                         <img src="src/imagem/sobre.png" alt="Foto2">
-                    </div>
+                    </div> -->
                     <div class="txt-sobre">
                         <h2 class="titulo">Muito Prazer, <span>Sou ByteCode.</span></h2>
                         <p>Olá, eu me chamo ByteCode, sou um bot CLT que chegou ao mundo para ajudar e divertir os usuarios, tocando musicas, traduzindo textos, jogos e entre outros, fui criado pelo @Lucasmassaroto1.</p>
@@ -50,8 +50,18 @@
         </section>
         <section id="commands">
             <div class="flex">
-                <div class="card-container" onclick="virar()">
-                    <div class="card" id="card">
+                <div class="card-container" onclick="virar(this)">
+                    <div class="card">
+                        <div class="front">
+                            <p>/ajuda</p>
+                        </div>
+                        <div class="back">
+                            <p>Lista de todos os comandos do ByteCode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container" onclick="virar(this)">
+                    <div class="card">
                         <div class="front">
                             <p>/ajuda</p>
                         </div>
