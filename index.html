@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>ByteCode</title>
+    <title>ByteCode Discord Bot</title>
 </head>
 <body>
     <header>
-        <h1>ByteCode</h1>
-        <nav>
+        <button class="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="menu-lateral">
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#sobre">Comandos</a></li>
-                <li><a href="#login" id="login-btn">Login</a></li>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
+                <li><a href="#"><i class="fa-solid fa-gears"></i>Comandos</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i>Contato</a></li>
             </ul>
         </nav>
+        <div class="background"></div>
     </header>
-    <section id="sobre">
-        <h2>Sobre o ByteCode</h2>
-        <p>ByteCode é um bot CLT que foi criado para ajudar e divertir as pessoas nos servidores.</p>
-        <a href="" class="btn">Me Adicione</a>
-    </section>
-    <section id="comandos">
-        <h2>Comandos</h2>
-            <ul>
-                <li><strong>/ajuda</strong> - Mostra o Menu com todos os comandos.</li>
-                <li><strong>!setwelcome</strong> - Comando que permite configurar mensagem de voas vindas.</li>
-                <li><strong>!play</strong> - Comando para o ByteCode tocar musica em call.</li>
-                <li><strong>!clear</strong> - Comando para limpar o chat.</li>
-            </ul>
-    </section>
+    <main class="conteudo flex">
+        <div class="card-container" onclick="virar()">
+            <div class="card" id="card">
+                <div class="front">
+                    <p>Frente Do Card</p>
+                </div>
+                <div class="back">
+                    <p>Costas Do Card</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
