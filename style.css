@@ -14,13 +14,21 @@
     font-family: "Exo 2", sans-serif;
 }
 body{
-    background-color: var(--text-color);
+    background: #6e6e6e;
     transition: background-color 0.5s ease;
 }
+.interface{
+    margin: 0 auto;
+}
 section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 100vh;
     border: 2px solid black;
   }
+
 /* HEADER */
 .menu-lateral{
     position: fixed;
@@ -82,14 +90,14 @@ section{
     left: 320px;
 }
 .conteudo{
-    /* margin-left: 80px; */
+    margin-left: 40px;
     padding: 40px;
-    color: var(--secondary-color);
-    background-color: var(--text-color);
+    /* color: var(--secondary-color);
+    background-color: var(--text-color); */
     transition: all 0.5s;
 }
 .conteudo.ativo{
-    margin-left: 340px;
+    margin-left: 300px;
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -109,7 +117,38 @@ section{
     visibility: visible;
 }
 
-/* CARDS */
+/* INICIO */
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+  }
+  .topo-do-site h1{
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .topo-do-site .text-topo-site h1 span{
+    color: #00FF08;
+    font-size: 32px;
+    display: block;
+  }
+  .topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+  }
+  @keyframes flutuar{
+    0%{
+      top: 0;
+    }
+    100%{
+      top: 30px;
+    }
+  }
+
+
+/* COMMANDS CARDS */
 .flex{
     display: flex;
     justify-content: center;
