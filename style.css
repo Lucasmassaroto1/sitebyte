@@ -3,7 +3,7 @@
     --primary-color: #00ca76;
     --secondary-color: #01916d;
     --text-color: #ecf0f1;
-    --text-secundary-color: #000f1f;
+    --text-secundary-color: #1f1200;
     --background-color: #34495e;
 }
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
@@ -17,6 +17,11 @@ body{
     background-color: var(--text-color);
     transition: background-color 0.5s ease;
 }
+section{
+    height: 100vh;
+    border: 2px solid black;
+  }
+/* HEADER */
 .menu-lateral{
     position: fixed;
     left: -300px;
@@ -77,14 +82,14 @@ body{
     left: 320px;
 }
 .conteudo{
-    margin-left: 80px;
+    /* margin-left: 80px; */
     padding: 40px;
     color: var(--secondary-color);
     background-color: var(--text-color);
     transition: all 0.5s;
 }
 .conteudo.ativo{
-    margin-left: 380px;
+    margin-left: 340px;
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -103,12 +108,13 @@ body{
     opacity: 1;
     visibility: visible;
 }
+
 /* CARDS */
 .flex{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 .card-contianer{
     perspective: 1000px;
@@ -142,4 +148,7 @@ body{
 } */
 .back{
     transform: rotateY(180deg);
+}
+.back p{
+    text-align: center;
 }
