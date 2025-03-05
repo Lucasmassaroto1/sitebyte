@@ -2,10 +2,9 @@ const botao = document.querySelector('.toggle');
 const menuLateral = document.querySelector('.menu-lateral');
 const conteudo = document.querySelector('.conteudo');
 const background = document.querySelector('.background');
-const card = document.getElementById('card');
 
-function virar(){
-    card.classList.toggle('virado');
+function virar(elemento){
+    elemento.querySelector('.card').classList.toggle('virado');
 }
 botao.addEventListener('click', () =>{
     botao.classList.toggle('ativo')
