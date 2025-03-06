@@ -1,11 +1,4 @@
 /* GERAL */
-:root{
-    --primary-color: #00ca76;
-    --secondary-color: #01916d;
-    --text-color: #ecf0f1;
-    --text-secundary-color: #1f1200;
-    --background-color: #34495e;
-}
 *{
     margin: 0;
     padding: 0;
@@ -49,7 +42,7 @@ h2.titulo span{
     top: 0;
     width: 300px;
     height: 100%;
-    background-color: var(--background-color);
+    background-color: #34495e;
     z-index: 3;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -67,7 +60,7 @@ h2.titulo span{
 }
 .menu-lateral ul li a{
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -77,14 +70,14 @@ h2.titulo span{
     font-size: 24px;
 }
 .menu-lateral ul li:hover{
-    background-color: var(--secondary-color);
+    background-color: #01916d;
 }
 .menu-lateral ul li a i:hover{
     transform: translateX(5px) rotate(5deg);
 }
 .toggle{
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #00ca76;
+    color: white;
     position: fixed;
     left: 20px;
     top: 20px;
@@ -97,7 +90,7 @@ h2.titulo span{
     transition: all 0.5s ease;
 }
 .toggle:hover{
-    background-color: var(--secondary-color);
+    background-color: #01916d;
 }
 .toggle.ativo{
     left: 320px;
@@ -109,8 +102,8 @@ h2.titulo span{
 }
 .conteudo.ativo{
     margin-left: 300px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #34495e;
+    color: white;
 }
 .background{
     position: fixed;
