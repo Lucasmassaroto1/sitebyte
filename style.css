@@ -9,6 +9,13 @@ body{
     background: #6e6e6e;
     transition: background-color 0.5s ease;
 }
+section{
+    border: 2px solid black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .flex{
     display: flex;
 }
@@ -19,14 +26,6 @@ h2.titulo{
 }
 h2.titulo span{
     color: #00FF08;
-}
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    /* border: 2px solid black; */
 }
 /* HEADER */
 .menu-lateral{
@@ -116,24 +115,24 @@ section{
     visibility: visible;
     backdrop-filter: blur(5px);
 }
-/* SECTION INICIO */
-section.topo-do-site .flex{
+/* SECTION INICIO*/
+section.inicio .flex{
     align-items: center;
     justify-content: center;
     gap: 90px;
 }
-.topo-do-site h1{
+.inicio h1{
     color: white;
     font-size: 42px;
     line-height: 40px;
     margin-bottom: 30px;
 }
-.topo-do-site .text-topo-site h1 span{
+.inicio .txt-inicio h1 span{
     color: #00FF08;
     font-size: 32px;
     display: block;
 }
-.topo-do-site .img-topo-site img{
+.inicio .img-topo-site img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
@@ -176,9 +175,11 @@ section.sobre .flex{
     text-decoration: none;
 }
 /* SECTION COMMANDS */
-section#commands{
+.comando{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    place-items: center;
 }
 .card-contianer{
     perspective: 1000px;
