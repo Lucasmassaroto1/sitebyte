@@ -10,7 +10,7 @@ body{
     transition: background-color 0.5s ease;
 }
 section{
-    border: 2px solid black;
+    /* border: 2px solid black; PARA SABER COMO ESTA AS COISAS (DA QUI PARA FRENTE É SÓ PARA TRAS...) */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -132,7 +132,7 @@ section.inicio .flex{
     font-size: 32px;
     display: block;
 }
-.inicio .img-topo-site img{
+.inicio .img-inicio img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
@@ -143,6 +143,20 @@ section.inicio .flex{
     100%{
         top: 30px;
     }
+}
+.btn-adiciona button{
+    background:  #00ca76;
+    color: black;
+    font-weight: 600;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: left 0.5s ease, background-color 0.3s ease;
+}
+.btn-adiciona button:hover{
+    background: #01916d;
 }
 /* SECTION SOBRE */
 section.sobre{
@@ -166,6 +180,7 @@ section.sobre .flex{
     display: block;
 }
 .sobre .txt-sobre p{
+    font-size: 28px;
     margin: 20px 0;
     text-align: justify;
 }
