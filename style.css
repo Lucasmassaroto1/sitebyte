@@ -38,7 +38,7 @@ section{
     background-color: #34495e;
     z-index: 3;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .menu-lateral.ativo{
     left: 0;
@@ -58,6 +58,10 @@ section{
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: transform 0.3s ease;
+}
+.menu-lateral ul li:hover a{
+    transform: translateX(5px);
 }
 .menu-lateral ul li a i{
     font-size: 24px;
@@ -80,7 +84,7 @@ section{
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: left 0.5s ease, background-color 0.3s ease;
 }
 .toggle:hover{
     background-color: #01916d;
@@ -89,14 +93,11 @@ section{
     left: 320px;
 }
 .conteudo{
-    /* margin-left: 40px;
-    padding: 40px; NÂO DESCOMENTAR ESSA BAGAÇA */
-    transition: all 0.5s;
+    width: 100%;
+    transition: margin-left 0.5s ease;
 }
 .conteudo.ativo{
     margin-left: 300px;
-    background-color: #34495e;
-    color: white
 }
 .background{
     position: fixed;
@@ -108,10 +109,12 @@ section{
     opacity: 0;
     visibility: hidden;
     z-index: 2;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .background.ativo{
     opacity: 1;
     visibility: visible;
+    backdrop-filter: blur(5px);
 }
 /* SECTION INICIO */
 section.topo-do-site .flex{
@@ -143,31 +146,34 @@ section.topo-do-site .flex{
     }
 }
 /* SECTION SOBRE */
-.sobre .flex{
-    align-items: center;
+section.sobre{
+    padding: 80px 4%;
+}
+section.sobre .flex{
     justify-content: center;
-    height: 100vh;
     gap: 60px;
 }
 .sobre .txt-sobre{
     color: white;
+    max-width: 800px;
 }
 .sobre .txt-sobre h2{
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
 }
-.sobre, .txt-sobre h2 span{
+.sobre .txt-sobre h2 span{
     color: #00FF08;
     display: block;
 }
-.sobre, .txt-sobre p{
+.sobre .txt-sobre p{
     margin: 20px 0;
     text-align: justify;
 }
-.sobre, .txt-sobre p{
+.sobre .txt-sobre p a{
     color: white;
     font-weight: 600;
+    text-decoration: none;
 }
 /* SECTION COMMANDS */
 section#commands{
