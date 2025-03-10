@@ -157,6 +157,7 @@ section.inicio .flex{
 }
 .btn-adiciona button:hover{
     background: #01916d;
+    box-shadow: 0px 0px 30px #01916d;
 }
 /* SECTION SOBRE */
 section.sobre{
@@ -233,4 +234,12 @@ section.sobre .flex{
 }
 .back p{
     text-align: center;
+}
+
+/* RESPONSIVEL */
+@media screen and (max-width: 768px) and (max-width: 991px){
+    /* SECTION COMMANDS */
+    .comando{
+        grid-template-columns: 1fr;
+    }
 }
