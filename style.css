@@ -6,7 +6,7 @@
     font-family: "Exo 2", sans-serif;
 }
 body{
-    background: #6e6e6e;
+    background: black;
     transition: background-color 0.5s ease;
 }
 section{
@@ -58,6 +58,15 @@ h2.titulo span{
     align-items: center;
     gap: 10px;
     transition: transform 0.3s ease;
+}
+.menu-lateral ul li a:hover{
+    transition: text-decoration 0.3s ease;
+}
+.menu-lateral ul li a span{
+    text-decoration: none;
+}
+.menu-lateral ul li a:hover span{
+    text-decoration: underline;
 }
 .menu-lateral ul li:hover a{
     transform: translateX(5px);
