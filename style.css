@@ -196,6 +196,7 @@ section.sobre .flex{
     grid-template-columns: repeat(3, auto);
     gap: 10px;
     place-items: center;
+    height: auto;
 }
 .card-contianer{
     perspective: 1000px;
@@ -238,6 +239,20 @@ section.sobre .flex{
 
 /* RESPONSIVEL */
 @media screen and (max-width: 768px) and (max-width: 991px){
+    /* GERAL */
+    .flex{
+        flex-direction: column;
+    }
+    /* SECTION INICIO */
+    section.inicio .flex{
+        gap: 40px;
+    }
+    .txt-inicio h1{
+        font-size: 40px;
+    }
+    .img-inicio img{
+        width: 100%;
+    }
     /* SECTION COMMANDS */
     .comando{
         grid-template-columns: 1fr;
