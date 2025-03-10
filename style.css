@@ -34,7 +34,7 @@ h2.titulo span{
     top: 0;
     width: 300px;
     height: 100%;
-    background-color: #34495e;
+    background-color: #353333;
     z-index: 3;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -87,6 +87,7 @@ h2.titulo span{
 }
 .toggle:hover{
     background-color: #01916d;
+    box-shadow: 0px 0px 30px #01916d;
 }
 .toggle.ativo{
     left: 320px;
@@ -204,7 +205,7 @@ section.sobre .flex{
 .card{
     background-color: #353333;
     border-radius: 30px;
-    border: 2px solid #FF00d4;
+    border: 2px solid #00ca76;
     width: 288px;
     height: 373px;
     position: relative;
@@ -213,6 +214,10 @@ section.sobre .flex{
     cursor: pointer;
     display: inline-block;
     margin: 10px;
+}
+.card:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 35px #00ca76;
 }
 .card.virado{
     transform: rotateY(180deg);
