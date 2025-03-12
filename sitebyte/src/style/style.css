@@ -156,19 +156,50 @@ section.inicio .flex{
   }
 }
 .btn-adiciona button{
-  background:  #00ca76;
-  color: black;
-  font-weight: 600;
-  width: 100px;
-  height: 50px;
-  border: none;
-  border-radius: 10px;
+  --color: #00ca76;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
-  transition: left 0.5s ease, background-color 0.3s ease;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+.btn-adiciona button::before, .btn-adiciona button::after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+.btn-adiciona button::before{
+  top: -1rem;
+  left: -1rem;
+}
+.btn-adiciona button::after{
+  left: calc(100% + 1rem);
+  top: calc(100% + 1rem);
+}
+.btn-adiciona button:hover::before, .btn-adiciona button:hover::after{
+  height: 410px;
+  width: 410px;
 }
 .btn-adiciona button:hover{
-  background: #01916d;
-  box-shadow: 0px 0px 30px #01916d;
+  color: black;
+}
+.btn-adiciona button:active{
+  filter: brightness(.8);
 }
 /* SECTION SOBRE */
 section.sobre{
