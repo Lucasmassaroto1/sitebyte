@@ -8,6 +8,7 @@
 body{
   background: black;
   transition: background-color 0.5s ease;
+  overflow-x: hidden;
 }
 section{
   /* border: 2px solid white; PARA SABER COMO ESTA AS COISAS (DA QUI PARA FRENTE É SÓ PARA TRAS...) */
