@@ -10,6 +10,17 @@
     <title>ByteCode Discord Bot</title>
 </head>
 <body>
+    <div class="terminal-loader" id="loader">
+        <div class="terminal-header">
+            <div class="terminal-title">Status</div>
+            <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+            </div>
+        </div>
+        <div class="text">Loading...</div>
+    </div>
     <header>
         <button class="toggle">
             <i class="fa-solid fa-bars"></i>
@@ -19,13 +30,13 @@
                 <li><a href="#inicio"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
                 <li><a href="#sobre"><i class="fa-solid fa-circle-info"></i><span>Sobre</span></a></li>
                 <li><a href="#comando"><i class="fa-solid fa-gears"></i><span>Comandos</span></a></li>
-                <li><a href="#"><i class="fa-solid fa-envelope"></i><span>Contato</span></a></li>
+                <li><a href="https://discord.com/oauth2/authorize?client_id=1309200248987586560&scope=bot&permissions=1759218604441591&intents=65535"><i class="fa-solid fa-plus"></i><span>Invite</span></a></li>
             </ul>
         </nav>
         <div class="background"></div>
     </header>
     <main class="conteudo">
-        <section class="inicio" id="inicio">
+        <section class="inicio fade" id="inicio">
             <div class="flex">
                 <div class="img-inicio">
                     <img class="bytefoto" src="src/image/ByteCode.svg">
@@ -38,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section class="sobre" id="sobre">
+        <section class="sobre fade" id="sobre">
             <div class="flex">
                 <div class="txt-sobre">
                     <h2 class="titulo">Venha conhecer o <span>ByteCode.</span></h2>
@@ -46,7 +57,7 @@
                 </div>
             </div>
         </section>
-        <section class="comando" id="comando">
+        <section class="comando fade" id="comando">
             <div class="card-container" onclick="virar(this)">
                 <div class="card">
                     <div class="front">
