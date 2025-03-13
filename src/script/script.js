@@ -33,9 +33,23 @@ document.addEventListener("scroll", () =>{
         }
     });
 });
-const loader = document.getElementById('loader');
-window.addEventListener('load', function(){
-    this.setTimeout(() =>{
-        loader.style.display = 'none';
-    },2000);
+document.addEventListener('DOMContentLoaded', () =>{
+    const loader = document.getElementById('loader');
+    const fadeSection = document.querySelectorAll(".fade");
+    window.addEventListener('load', function(){
+        setTimeout(() =>{
+            loader.style.display = 'none';
+            fadeSection.forEach((section) =>{
+                section.classList.add('visible');
+            });
+        },2000);
+    });
 });
+
+
+// const loader = document.getElementById('loader');
+// window.addEventListener('load', function(){
+//     this.setTimeout(() =>{
+//         loader.style.display = 'none';
+//     },2000);
+// });
