@@ -100,14 +100,14 @@ h2.titulo span{
   box-shadow: 0px 0px 30px #01916d;
 }
 .toggle.ativo{
-  left: 0; /*320px*/
+  left: 320px;
 }
 .conteudo{
   width: 100%;
   transition: margin-left 0.5s ease;
 }
 .conteudo.ativo{
-  margin-left: 300px;
+  margin-left: 0;
 }
 .background{
   position: fixed;
@@ -292,17 +292,21 @@ section.sobre .flex{
   }
   /* SECTION INICIO */
   section.inicio .flex{
-      gap: 40px;
+    gap: 40px;
   }
   .txt-inicio h1{
-      font-size: 40px;
+    font-size: 40px;
   }
   .img-inicio img{
-      width: 100%;
+    width: 100%;
+  }
+  /* SECTION SOBRE */
+  section.sobre{
+    padding: 80px 4%;
   }
   /* SECTION COMMANDS */
   .comando{
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
