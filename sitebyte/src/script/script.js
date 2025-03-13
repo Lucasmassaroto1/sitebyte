@@ -20,3 +20,22 @@ if(botao && menuLateral && conteudo && background){
         background.classList.remove('ativo')
     });
 }
+// ANIMAÇÔES
+document.addEventListener("scroll", () =>{
+    const elements = document.querySelectorAll(".fade");
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        if(position < screenPosition){
+            element.classList.add("visible");
+        }else{
+            element.classList.remove("visible");
+        }
+    });
+});
+const loader = document.getElementById('loader');
+window.addEventListener('load', function(){
+    this.setTimeout(() =>{
+        loader.style.display = 'none';
+    },2000);
+});
