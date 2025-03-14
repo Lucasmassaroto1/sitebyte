@@ -115,7 +115,8 @@ particlesJS("particles-js", {
     },
     retina_detect: true
 });
-var count_particles, stats, update;
+/*
+var count_particles, stats, update; VOU VER ISSO DEPOIS
 stats = new Stats();
 stats.setMode(0);
 stats.domElement.style.position = "absolute";
@@ -132,3 +133,4 @@ update = function () {
     requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+*/
