@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
   font-family: "Exo 2", sans-serif;
 }
 body{
@@ -403,4 +404,15 @@ section.sobre .flex{
   100%{
     width: 0;
   }
+}
+canvas{
+  display: block;
+}
+#particles-js{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
