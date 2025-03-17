@@ -5,6 +5,7 @@
   box-sizing: border-box;
   user-select: none;
   font-family: "Exo 2", sans-serif;
+  max-width: 100%;
 }
 body{
   background: black;
