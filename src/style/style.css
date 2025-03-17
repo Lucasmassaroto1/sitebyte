@@ -320,6 +320,9 @@ section.sobre .flex{
   .flex{
     flex-direction: column;
   }
+  .conteudo{
+    margin-left: 0 !important;
+  }
   /* SECTION INICIO */
   section.inicio .flex{
     gap: 40px;
