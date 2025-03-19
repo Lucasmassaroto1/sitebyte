@@ -318,6 +318,13 @@ footer .line-footer p a{
   .conteudo{
     margin-left: 0 !important;
   }
+  /* HEADER */
+  .menu-lateral{
+    width: 220px;
+  }
+  .toggle.ativo{
+    left: 240px;
+  }
   /* SECTION INICIO */
   section.inicio .flex{
     gap: 40px;
