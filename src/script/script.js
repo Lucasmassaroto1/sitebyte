@@ -30,6 +30,19 @@ if(botao && menuLateral && conteudo && background){
     });
 }
 // ANIMAÇÔES
+const links = document.querySelectorAll("nav ul li a");
+for (const link of links){
+    link.addEventListener("click", smoothScroll);
+}
+function smoothScroll(event){
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    window.scrollTo({
+    top: targetSection.offsetTop,
+    behavior: "smooth"
+    });
+}
 document.addEventListener("scroll", () =>{
     const elements = document.querySelectorAll(".fade");
     elements.forEach(element => {
@@ -45,13 +58,20 @@ document.addEventListener("scroll", () =>{
 document.addEventListener('DOMContentLoaded', () =>{
     const loader = document.getElementById('loader');
     const fadeSection = document.querySelectorAll(".fade");
+
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+
     window.addEventListener('load', function(){
         setTimeout(() =>{
             loader.style.display = 'none';
+            document.documentElement.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
+
             fadeSection.forEach((section) =>{
                 section.classList.add('visible');
             });
-        },2000);
+        },4000);
     });
 });
 // const loader = document.getElementById('loader');
@@ -134,16 +154,3 @@ update = function () {
 };
 requestAnimationFrame(update);
 */
-const links = document.querySelectorAll("nav ul li a");
-for (const link of links){
-    link.addEventListener("click", smoothScroll);
-}
-function smoothScroll(event){
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-    window.scrollTo({
-    top: targetSection.offsetTop,
-    behavior: "smooth"
-    });
-}
