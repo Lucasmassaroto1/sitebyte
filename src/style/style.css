@@ -232,9 +232,12 @@ section.sobre .flex{
   text-align: justify;
 }
 .sobre .txt-sobre p a{
-  color: white;
+  color: #00ca76;
   font-weight: 600;
   text-decoration: none;
+}
+.sobre .txt-sobre p a:hover{
+  text-decoration: underline;
 }
 /* SECTION COMMANDS */
 .comando{
@@ -327,6 +330,9 @@ footer .line-footer p a{
     left: 240px;
   }
   /* SECTION INICIO */
+  section.inicio{
+    padding: 80px 4%;
+  }
   section.inicio .flex{
     gap: 40px;
   }
@@ -339,6 +345,11 @@ footer .line-footer p a{
   /* SECTION SOBRE */
   section.sobre{
     padding: 80px 4%;
+  }
+  .sobre .txt-sobre p{
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: justify;
   }
   /* SECTION COMMANDS */
   section.comando{
