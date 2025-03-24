@@ -12,6 +12,17 @@ body{
   transition: background-color 0.5s ease;
   overflow-x: hidden;
 }
+body::-webkit-scrollbar{
+  width: 8px;
+}
+body::-webkit-scrollbar-track{
+  background: rgb(161, 161, 161, 0.3);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background: lime;
+  border-radius: 10px;
+}
 section{
   /* border: 2px solid white; PARA SABER COMO ESTA AS COISAS (DA QUI PARA FRENTE É SÓ PARA TRAS...) */
   height: 100vh;
