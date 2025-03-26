@@ -1,30 +1,34 @@
 /* GERAL */
+:root{
+  --color-primary: #00CA76;
+  --color-secundary: #01916D;
+  --color-txt: #FFFFFF;
+  --color-menu: #353333;
+  --color-hoverbtn: #000000;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
   font-family: "Exo 2", sans-serif;
-  max-width: 100%;
 }
 body{
   background: black;
-  transition: background-color 0.5s ease;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 body::-webkit-scrollbar{
   width: 8px;
 }
 body::-webkit-scrollbar-track{
-  background: rgb(161, 161, 161, 0.3);
+  background: rgba(161, 161, 161, 0.3);
   border-radius: 10px;
 }
 body::-webkit-scrollbar-thumb{
-  background: lime;
+  background: var(--color-secundary); /*Cor anterior #00ca76*/
   border-radius: 10px;
 }
 section{
-  /* border: 2px solid white; PARA SABER COMO ESTA AS COISAS (DA QUI PARA FRENTE É SÓ PARA TRAS...) */
+  border: 2px solid white;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -34,12 +38,12 @@ section{
   display: flex;
 }
 h2.titulo{
-  color: white;
+  color: var(--color-txt);
   font-size: 38px;
   text-align: center;
 }
 h2.titulo span{
-  color: #00FF08;
+  color: var(--color-primary);
 }
 /* HEADER */
 .menu-lateral{
@@ -48,14 +52,11 @@ h2.titulo span{
   top: 0;
   width: 300px;
   height: 100%;
-  background-color: #353333;
+  background-color: var(--color-menu);
   border-radius: 0px 20px 20px 0px;
   z-index: 3;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.menu-lateral.ativo{
-  left: 0;
 }
 .menu-lateral ul{
   list-style: none;
@@ -66,62 +67,37 @@ h2.titulo span{
   padding: 15px 30px;
 }
 .menu-lateral ul li a{
+  color:var(--color-txt);
   text-decoration: none;
-  color: white;
   font-size: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
   transition: transform 0.3s ease;
 }
-.menu-lateral ul li a:hover{
-  transition: text-decoration 0.3s ease;
-}
 .menu-lateral ul li a span{
   text-decoration: none;
-}
-.menu-lateral ul li a:hover span{
-  text-decoration: underline;
-}
-.menu-lateral ul li:hover a{
-  transform: translateX(5px);
 }
 .menu-lateral ul li a i{
   font-size: 24px;
 }
-.menu-lateral ul li:hover{
-  background-color: #01916d;
-}
-.menu-lateral ul li a i:hover{
-  transform: translateX(5px) rotate(5deg);
-}
 .toggle{
-  background-color: #00ca76;
-  color: white;
+  background-color:var(--color-primary);
+  color:var(--color-txt);
   position: fixed;
   left: 20px;
   top: 20px;
-  z-index: 4;
+  z-index: 3;
   border-radius: 5px;
   font-size: 24px;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  transition: left 0.5s ease, background-color 0.3s ease;
-}
-.toggle:hover{
-  background-color: #01916d;
-  box-shadow: 0px 0px 30px #01916d;
-}
-.toggle.ativo{
-  left: 320px;
+  transition: left 0.5s ease;
 }
 .conteudo{
   width: 100%;
   transition: margin-left 0.5s ease;
-}
-.conteudo.ativo{
-  margin-left: 0;
 }
 .background{
   position: fixed;
@@ -135,26 +111,53 @@ h2.titulo span{
   z-index: 2;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+.menu-lateral ul li a:hover{
+  transition: text-decoration 0.3s ease;
+}
+.menu-lateral ul li a:hover span{
+  text-decoration: underline;
+}
+.menu-lateral ul li:hover{
+  background: var(--color-secundary);
+}
+.menu-lateral ul li:hover a{
+  transform: translateX(5px);
+}
+.menu-lateral ul li a i:hover{
+  transform: translateX(5px) rotate(5deg);
+}
+.toggle:hover{
+  background-color: var(--color-secundary);
+}
+.menu-lateral.ativo{
+  left: 0;
+}
+.toggle.ativo{
+  left: 320px;
+}
+.conteudo.ativo{
+  margin-left: 0;
+}
 .background.ativo{
   opacity: 1;
   visibility: visible;
   backdrop-filter: blur(5px);
 }
-/* SECTION INICIO*/
+/* SECTION INICIO */
 section.inicio .flex{
   align-items: center;
   justify-content: center;
   gap: 90px;
 }
 .inicio h1{
-  color: white;
-  font-size: 60px; /*42px*/
-  line-height: 50px; /*40px*/
+  color: var(--color-txt);
+  font-size: 60px;
+  line-height: 50px;
   margin-bottom: 30px;
 }
 .inicio .txt-inicio h1 span{
-  color: #00FF08;
-  font-size: 40px; /*32px*/
+  color: var(--color-primary);
+  font-size: 40px;
   display: block;
 }
 .inicio .img-inicio img{
@@ -164,15 +167,15 @@ section.inicio .flex{
 }
 @keyframes flutuar{
   0%{
-      top: 0;
+    top: 0;
   }
   100%{
-      top: 30px;
+    top: 30px;
   }
 }
 .btn-adiciona button{
-  --color: #00ca76;
-  padding: 0.8em 1.7em;
+  color: var(--color-primary);
+  padding: 0.8rem 1.7rem;
   background-color: transparent;
   border-radius: .3em;
   position: relative;
@@ -182,8 +185,6 @@ section.inicio .flex{
   font-weight: 400;
   font-size: 17px;
   border: 1px solid;
-  text-transform: uppercase;
-  color: var(--color);
   z-index: 1;
 }
 .btn-adiciona button::before, .btn-adiciona button::after{
@@ -195,7 +196,7 @@ section.inicio .flex{
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color: var(--color);
+  background-color: var(--color-primary);
   transition: 1s ease;
 }
 .btn-adiciona button::before{
@@ -207,11 +208,11 @@ section.inicio .flex{
   top: calc(100% + 1rem);
 }
 .btn-adiciona button:hover::before, .btn-adiciona button:hover::after{
-  height: 410px;
   width: 410px;
+  height: 410px;
 }
 .btn-adiciona button:hover{
-  color: black;
+  color: var(--color-hoverbtn);
 }
 .btn-adiciona button:active{
   filter: brightness(.8);
@@ -225,7 +226,7 @@ section.sobre .flex{
   gap: 60px;
 }
 .sobre .txt-sobre{
-  color: white;
+  color: var(--color-txt);
   max-width: 800px;
 }
 .sobre .txt-sobre h2{
@@ -234,23 +235,26 @@ section.sobre .flex{
   margin-bottom: 30px;
 }
 .sobre .txt-sobre h2 span{
-  color: #00FF08;
+  color: var(--color-primary);
   display: block;
 }
 .sobre .txt-sobre p{
-  font-size: 28px;
+  font-size: 24px;
   margin: 20px 0;
   text-align: justify;
 }
 .sobre .txt-sobre p a{
-  color: #00ca76;
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
 }
 .sobre .txt-sobre p a:hover{
   text-decoration: underline;
 }
-/* SECTION COMMANDS */
+/* SECTION COMANDOS */
+section.comando{
+  padding: 80px 4%;
+}
 .comando{
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -262,9 +266,9 @@ section.sobre .flex{
   perspective: 1000px;
 }
 .card{
-  background-color: #353333;
+  background-color: var(--color-menu);
   border-radius: 30px;
-  border: 2px solid #00ca76;
+  border: 2px solid var(--color-primary);
   width: 280px;
   height: 373px;
   position: relative;
@@ -276,7 +280,7 @@ section.sobre .flex{
 }
 .card:hover{
   transition: 0.5s;
-  box-shadow: 0px 0px 35px #00ca76;
+  box-shadow: 0px 0px 35px var(--color-primary);
 }
 .card.virado{
   transform: rotateY(180deg);
@@ -292,7 +296,7 @@ section.sobre .flex{
   align-items: center;
   font-size: 32px;
   gap: 10px;
-  color: white;
+  color: var(--color-txt);
 }
 .back{
   transform: rotateY(180deg);
@@ -311,36 +315,29 @@ footer .line-footer{
   padding: 10px 0;
 }
 .borda{
-  border-top: 2px solid #00FF08;
+  border-top: 2px solid var(--color-primary);
 }
 footer .line-footer p{
-  color: white;
-}
-footer .line-footer p i{
-  color: #00FF08;
-  font-size: 22px;
+  color: var(--color-txt);
 }
 footer .line-footer p a{
-  color: white;
+  color: var(--color-txt);
   text-decoration: none;
 }
 /* RESPONSIVEL */
 @media screen and (max-width: 768px){
-  /* GERAL */
   .flex{
     flex-direction: column;
   }
   .conteudo{
     margin-left: 0 !important;
   }
-  /* HEADER */
   .menu-lateral{
     width: 220px;
   }
   .toggle.ativo{
     left: 240px;
   }
-  /* SECTION INICIO */
   section.inicio{
     padding: 80px 4%;
   }
@@ -350,10 +347,9 @@ footer .line-footer p a{
   .txt-inicio h1{
     font-size: 40px;
   }
-  .img-inicio img{
+  section.inicio .img-inicio img{
     width: 100%;
   }
-  /* SECTION SOBRE */
   section.sobre{
     padding: 80px 4%;
   }
@@ -362,20 +358,17 @@ footer .line-footer p a{
     margin: 20px 0;
     text-align: justify;
   }
-  /* SECTION COMMANDS */
   section.comando{
     grid-template-columns: 1fr;
   }
 }
 @media screen and (max-width: 991px){
-  /* GERAL */
   .flex{
     flex-direction: column;
   }
   .conteudo{
     margin-left: 0 !important;
   }
-  /* SECTION INICIO */
   section.inicio .flex{
     gap: 40px;
   }
@@ -385,16 +378,14 @@ footer .line-footer p a{
   .img-inicio img{
     width: 100%;
   }
-  /* SECTION SOBRE */
   section.sobre{
     padding: 80px 4%;
   }
-  /* SECTION COMMANDS */
   .comando{
     grid-template-columns: repeat(2, auto);
   }
 }
-/* ANIMAÇÔES */
+/* ANIMAÇÕES */
 .fade{
   opacity: 0;
   transition: opacity 1s ease-in-out;
