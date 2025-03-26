@@ -28,7 +28,6 @@ body::-webkit-scrollbar-thumb{
   border-radius: 10px;
 }
 section{
-  border: 2px solid white;
   height: 100vh;
   display: flex;
   justify-content: center;
