@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ByteCode, Um simples Bot CLT, criado para ajudar e entreter os usuários">
+    <meta name="author" content="Lucas Massaroto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="src/style/style.css">
@@ -21,7 +23,7 @@
         </div>
         <div class="text">Loading...</div>
     </div>
-    <header>
+    <header class="fade">
         <button class="toggle">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -40,13 +42,13 @@
         <section class="inicio fade" id="inicio">
             <div class="flex">
                 <div class="img-inicio">
-                    <img class="bytefoto" src="src/image/ByteCode.svg">
+                <img class="bytefoto" src="src/image/ByteCode.svg" alt="ByteCodeLogo">
                 </div>
                 <div class="txt-inicio">
                     <h1>ByteCode, <span>um simples bot CLT.</span></h1>
                     <div class="btn-adiciona">
-                        <a href="https://discord.com/oauth2/authorize?client_id=1309200248987586560&scope=bot&permissions=1759218604441591&intents=65535" target="_blank" rel="noopener noreferrer"><button type="button"><i class="fa-solid fa-robot"></i> Me adicione</button></a>
-                        <a href="https://discord.gg/Bs9pMBnDX3" target="_blank" rel="noopener noreferrer"><button type="button"><i class="fa-brands fa-discord"></i> Suporte</button></a>
+                        <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1309200248987586560&scope=bot&permissions=1759218604441591&intents=65535', '_blank')" type="button"><i class="fa-solid fa-robot"></i> Me adicione</button>
+                        <button onclick="window.open('https://discord.gg/Bs9pMBnDX3', '_blank')" type="button"><i class="fa-brands fa-discord"></i> Suporte</button>
                     </div>
                 </div>
             </div>
@@ -62,90 +64,81 @@
             </div>
         </section>
         <section class="comando fade" id="comando">
-            <div class="card-container" onclick="virar(this)">
-                <div class="card">
-                    <div class="front">
-                        <p>Slash Commands</p>
-                    </div>
-                    <div class="back">
-                        <p><b>/ajuda</b></p>
-                    </div>
+            <article class="card">
+                <div class="card-image">
+                    <img src="src/image/ByteCode.svg" alt="ByteCodeLogo" />
                 </div>
-            </div>
-            <div class="card-container" onclick="virar(this)">
-                <div class="card">
-                    <div class="front">
-                        <p>Comunicação</p>
-                    </div>
-                    <div class="back">
-                        <p><b>!translate</b></p>
-                    </div>
+                <div class="category">Slash Commands</div>
+                <div class="heading">
+                    <p>/ajuda</p>
+                    <p>/falar</p>
+                    <p>/sobre</p>
+                    <p>/prefix</p>
                 </div>
-            </div>
-            <div class="card-container" onclick="virar(this)">
-                <div class="card">
-                    <div class="front">
-                        <p>Diversão</p>
-                    </div>
-                    <div class="back">
-                        <p><b>!ppt</b></p>
-                    </div>
+                <div class="author">By <span class="name">Lucas Massaroto.</span></div>
+            </article>
+            <article class="card">
+                <div class="card-image">
+                    <img src="src/image/ByteCode.svg" alt="ByteCodeLogo" />
                 </div>
-            </div>
-            <div class="card-container" onclick="virar(this)">
-                <div class="card">
-                    <div class="front">
-                        <p>Música</p>
-                    </div>
-                    <div class="back">
-                        <p><b>!play</b></p>
-                        <p><b>!pause</b></p>
-                        <p><b>!skip</b></p>
-                        <p><b>!volume</b></p>
-                        <p><b>!leave</b></p>
-                    </div>
+                <div class="category">Comunicação</div>
+                <div class="heading"><p>!translate</p></div>
+                <div class="author">By <span class="name">Lucas Massaroto.</span></div>
+            </article>
+            <article class="card">
+                <div class="card-image">
+                    <img src="src/image/ByteCode.svg" alt="ByteCodeLogo" />
                 </div>
-            </div>
-            <div class="card-container" onclick="virar(this)">
-                <div class="card">
-                    <div class="front">
-                        <p>Moderação</p>
-                    </div>
-                    <div class="back">
-                        <p><b>!clear</b></p>
-                        <p><b>!setwelcome</b></p>
-                    </div>
+                <div class="category">Diversão</div>
+                <div class="heading"><p>!ppt</p></div>
+                <div class="author">By <span class="name">Lucas Massaroto.</span></div>
+            </article> 
+            <article class="card">
+                <div class="card-image">
+                    <img src="src/image/ByteCode.svg" alt="ByteCodeLogo" />
                 </div>
-            </div>
-            <div class="card-container" onclick="virar(this)">
-                <div class="card">
-                    <div class="front">
-                        <p>HybridCommands</p>
-                    </div>
-                    <div class="back">
-                        <p><b>/setprefix ou !setprefix</b></p>
-                    </div>
+                <div class="category">Música</div>
+                <div class="heading">
+                    <p>!play</p>
+                    <p>!pause</p>
+                    <p>!skip</p>
+                    <p>!volume</p>
+                    <p>!leave</p>
                 </div>
-            </div>
+                <div class="author">By <span class="name">Lucas Massaroto.</span></div>
+            </article>
+            <article class="card">
+                <div class="card-image">
+                    <img src="src/image/ByteCode.svg" alt="ByteCodeLogo" />
+                </div>
+                <div class="category">Moderação</div>
+                <div class="heading">
+                    <p>!clear</p>
+                    <p>!setwelcome</p>
+                </div>
+                <div class="author">By <span class="name">Lucas Massaroto.</span></div>
+            </article>
+            <article class="card">
+                <div class="card-image">
+                    <img src="src/image/ByteCode.svg" alt="ByteCodeLogo" />
+                </div>
+                <div class="category">HybridCommands</div>
+                <div class="heading">
+                    <p>/setprefix ou !setprefix</p>
+                </div>
+                <div class="author">By <span class="name">Lucas Massaroto.</span></div>
+            </article>
         </section>
     </main>
     <footer>
         <div class="line-footer">
-            <div class="flex">
-            <div class="logo-footer">
-                <img src="src/image/ByteCode.svg" style="width: 50px;" alt="ByteCodeLogo">
-            </div>
             <div class="btn-adiciona">
-                <a href="https://discord.com/oauth2/authorize?client_id=1309200248987586560&scope=bot&permissions=1759218604441591&intents=65535" target="_blank" rel="noopener noreferrer"><button type="button"><i class="fa-solid fa-robot"></i></button></a>
-                <a href="https://discord.gg/Bs9pMBnDX3" target="_blank" rel="noopener noreferrer"><button type="button"><i class="fa-brands fa-discord"></i></button></a>
-                <a href="https://www.tiktok.com/@lucasmassaroto1" target="_blank" rel="noopener noreferrer"><button><i class="fa-brands fa-tiktok"></i></button></a>
-                <!-- <a href="https://www.instagram.com/lucasmassaroto17/" target="_blank" rel="noopener noreferrer"><button><i class="fa-brands fa-instagram"></i></button></a>
-                <a href="https://github.com/Lucasmassaroto1" target="_blank" rel="noopener noreferrer"><button><i class="fa-brands fa-github"></i></button></a> -->
-            </div>
+                <button onclick="window.open('https://discord.com/oauth2/authorize?client_id=1309200248987586560&scope=bot&permissions=1759218604441591&intents=65535', '_blank')" type="button"><i class="fa-solid fa-robot"></i></button>
+                <button onclick="window.open('https://discord.gg/Bs9pMBnDX3', '_blank')" type="button"><i class="fa-brands fa-discord"></i></button>
+                <button onclick="window.open('https://www.tiktok.com/@lucasmassaroto1', '_blank')" type="button"><i class="fa-brands fa-tiktok"></i></button>
             </div>
         </div>
-        <div class="line-footer">
-            <div class="line-footer borda">
+        <div class="line-footer borda">
             <p>&copy; Develop By <a href="https://github.com/Lucasmassaroto1" target="_blank" rel="noopener noreferrer">Lucasmassaroto1.</a></p>
         </div>
     </footer>
