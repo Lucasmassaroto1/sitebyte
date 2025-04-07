@@ -59,6 +59,57 @@ section{
   justify-content: center;
   align-items: center;
 }
+.btn-global{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.btn-global button{
+  color: var(--color-primary);
+  padding: 0.8rem 1.7rem;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  z-index: 1;
+}
+.btn-global button::before, .btn-global button::after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color-primary);
+  transition: 1s ease;
+}
+.btn-global button::before{
+  top: -1rem;
+  left: -1rem;
+}
+.btn-global button::after{
+  left: calc(100% + 1rem);
+  top: calc(100% + 1rem);
+}
+.btn-global button:hover::before, .btn-global button:hover::after{
+  width: 410px;
+  height: 410px;
+}
+.btn-global button:hover{
+  color: var(--color-bg);
+}
+.btn-global button:active{
+  filter: brightness(.8);
+}
 
 /* ========== HEADER ========== */
 .menu-lateral{
@@ -186,56 +237,6 @@ section.inicio{
     top: 30px;
   }
 }
-.btn-adiciona{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-.btn-adiciona button{
-  color: var(--color-primary);
-  padding: 0.8rem 1.7rem;
-  background-color: transparent;
-  border-radius: .3em;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 1px solid;
-  z-index: 1;
-}
-.btn-adiciona button::before, .btn-adiciona button::after{
-  content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  background-color: var(--color-primary);
-  transition: 1s ease;
-}
-.btn-adiciona button::before{
-  top: -1rem;
-  left: -1rem;
-}
-.btn-adiciona button::after{
-  left: calc(100% + 1rem);
-  top: calc(100% + 1rem);
-}
-.btn-adiciona button:hover::before, .btn-adiciona button:hover::after{
-  width: 410px;
-  height: 410px;
-}
-.btn-adiciona button:hover{
-  color: var(--color-bg);
-}
-.btn-adiciona button:active{
-  filter: brightness(.8);
-}
 
 /* ========== SOBRE ========== */
 section.sobre{
@@ -312,6 +313,49 @@ section.sobre{
 .author .name{
   font-weight: 600;
 }
+
+/* ========== CRIADOR ========== */
+#criador{
+  background-color: #0f0f0f;
+  color: var(--color-txt);
+  padding: 60px 20px;
+}
+.criador-container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.criador-container h2{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--color-primary);
+}
+.perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.perfil img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+}
+.texto{
+  max-width: 600px;
+  text-align: center;
+}
+.texto h3{
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.texto p{
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* ========== FOOTER ========== */
 footer{
   padding: 40px 20px;
@@ -334,6 +378,7 @@ footer a{
 footer a:hover{
   text-decoration: underline;
 }
+
 /* ========== RESPONSIVO ========== */
 @media screen and (max-width: 768px){
   .menu-lateral{
@@ -369,10 +414,12 @@ footer a:hover{
   section.sobre{
     padding: 80px 4%;
   }
-  .comando{
-    grid-template-columns: repeat(2, auto);
+  .perfil{
+    flex-direction: column;
+    align-items: center;
   }
 }
+
 /* ========== ANIMAÇÕES ========== */
 .fade{
   opacity: 0;
