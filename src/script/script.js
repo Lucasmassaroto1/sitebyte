@@ -4,9 +4,7 @@ const linksMenu = document.querySelectorAll('.menu-lateral a');
 const conteudo = document.querySelector('.conteudo');
 const background = document.querySelector('.background');
 
-function virar(elemento){
-    elemento.querySelector('.card').classList.toggle('virado');
-}
+// ========== MENU LATERAL ==========
 if(botao && menuLateral && conteudo && background){
     botao.addEventListener('click', () =>{
         botao.classList.toggle('ativo')
@@ -29,7 +27,8 @@ if(botao && menuLateral && conteudo && background){
         });
     });
 }
-// ANIMAÇÔES
+
+// ========== ANIMAÇÃO ==========
 const links = document.querySelectorAll("nav ul li a");
 for (const link of links){
     link.addEventListener("click", smoothScroll);
@@ -55,6 +54,8 @@ document.addEventListener("scroll", () =>{
         }
     });
 });
+
+// ========== LOADING ==========
 document.addEventListener('DOMContentLoaded', () =>{
     const loader = document.getElementById('loader');
     const fadeSection = document.querySelectorAll(".fade");
@@ -73,4 +74,13 @@ document.addEventListener('DOMContentLoaded', () =>{
             });
         },4000);
     });
+});
+
+// ========== LIGHT/DARK MODE ==========
+const toggleBtn = document.getElementById('toggleTheme');
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.innerHTML = document.body.classList.contains('light-mode') 
+        ? '<i class="fa-solid fa-sun"></i>' 
+        : '<i class="fa-solid fa-moon"></i>';
 });

@@ -7,6 +7,11 @@
   --color-card-bg: #2c2c2c;
   --color-scrollbar: rgba(161, 161, 161, 0.3);
 }
+body.light-mode {
+  --color-bg: #f5f5f5;
+  --color-txt: #111;
+  --color-card-bg: #e0e0e0;
+}
 
 /* ========== RESET & BASE ========== */
 *{
@@ -89,7 +94,7 @@ section{
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   transition: 1s ease;
 }
 .btn-global button::before{
@@ -118,7 +123,7 @@ section{
   top: 0;
   width: 300px;
   height: 100%;
-  background-color: var(--color-card-bg);
+  background: var(--color-card-bg);
   border-radius: 0px 20px 20px 0px;
   z-index: 3;
   transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -160,6 +165,15 @@ section{
   cursor: pointer;
   transition: left 0.5s ease;
 }
+#toggleTheme{
+  background: transparent;
+  color: var(--color-txt);
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
 .conteudo{
   width: 100%;
   transition: margin-left 0.5s ease;
@@ -189,6 +203,9 @@ section{
   transform: translateX(5px);
 }
 .menu-lateral ul li a i:hover{
+  transform: translateX(5px) rotate(5deg);
+}
+#toggleTheme:hover{
   transform: translateX(5px) rotate(5deg);
 }
 .toggle:hover{
@@ -298,6 +315,9 @@ section.sobre{
   color: var(--color-primary);
   padding: 10px 15px 0;
 }
+.list-commands li{
+  list-style: none;
+}
 .heading{
   padding: 10px 15px;
   font-weight: 600;
@@ -316,8 +336,7 @@ section.sobre{
 
 /* ========== CRIADOR ========== */
 #criador{
-  background-color: #0f0f0f;
-  color: var(--color-txt);
+  background: var(--color-card-bg);
   padding: 60px 20px;
 }
 .criador-container{
