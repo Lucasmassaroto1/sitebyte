@@ -497,7 +497,8 @@ footer a:hover{
   bottom: 2rem;
   right: 2rem;
   display: none;
-  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
   font-size: 1.5rem;
   border: none;
   background: var(--color-primary);
