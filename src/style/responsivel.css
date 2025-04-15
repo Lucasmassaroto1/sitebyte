@@ -1,0 +1,40 @@
+/* ========== RESPONSIVO ========== */
+@media screen and (max-width: 48rem){ /*768px*/
+    .menu-lateral{
+        width: 13.75rem; /*220px*/
+    }
+    .toggle.ativo{
+        left: 15rem; /*140px*/
+    }
+    .inicio .txt-inicio h1{
+        font-size: 2.25rem; /*36px*/
+    }
+    .inicio .txt-inicio h1 span{
+        font-size: 1.5rem; /*24px*/
+    }
+    .sobre .txt-sobre{
+        font-size: 1.125rem; /*18px*/
+        text-indent: 0.625rem; /*10px*/
+    }
+    section.comando{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 61.9375rem){ /*991px*/
+    section.inicio .flex{
+        gap: 2.5rem; /*40px*/
+    }
+    .inicio .txt-inicio h1{
+        font-size: 2.25rem; /*36px*/
+    }
+    .img-inicio img{
+        width: 100%;
+    }
+    section.sobre{
+        padding: 5rem 4%; /*80px 4%*/
+    }
+    .perfil{
+        flex-direction: column;
+        align-items: center;
+    }
+}
