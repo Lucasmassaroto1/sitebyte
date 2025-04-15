@@ -492,3 +492,17 @@ footer a:hover{
     width: 0;
   }
 }
+.voltar-topo{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-txt);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
