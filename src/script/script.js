@@ -72,9 +72,11 @@ btnTopo.addEventListener('click', () => {
 
 // ========== LIGHT/DARK MODE ==========
 const toggleBtn = document.getElementById('toggleTheme');
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    toggleBtn.innerHTML = document.body.classList.contains('light-mode') 
+if(toggleBtn){
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode')
+        toggleBtn.innerHTML = document.body.classList.contains('light-mode') 
         ? '<i class="fa-solid fa-sun"></i>' 
         : '<i class="fa-solid fa-moon"></i>';
-});
+    });
+}
