@@ -56,8 +56,42 @@ document.addEventListener("scroll", () =>{
         }
     });
 });
+document.addEventListener("scroll", () =>{
+    const elements = document.querySelectorAll(".slide-right, .glow-effect");
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        if(position < screenPosition){
+            element.classList.add("visible");
+        }else{
+            element.classList.remove("visible");
+        }
+    });
+});
+document.addEventListener("scroll", () =>{
+    const elements = document.querySelectorAll(".slide-right, .glow-effect");
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        if (position < screenPosition && !element.classList.contains("visible")) {
+            element.classList.add("visible");
+        } else if (position >= screenPosition && element.classList.contains("visible")) {
+            element.classList.remove("visible");
+        }
+        if(element.classList.contains("slide-right") && !element.classList.contains("visible")){
+            element.classList.remove("slide-right");
+            void element.offsetWidth;
+            element.classList.add("slide-right");
+        }
+        if(element.classList.contains("glow-effect") && !element.classList.contains("visible")){
+            element.classList.remove("glow-effect");
+            void element.offsetWidth;
+            element.classList.add("glow-effect");
+        }
+    });
+});
 
-// ========== ANIMAÇÃO DE FADE ==========
+// ========== ANIMAÇÃO VOLTAR P/TOPO ==========
 const btnTopo = document.getElementById('voltarTopo');
 window.addEventListener('scroll', () =>{
     if(window.scrollY > 300){
